@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kwitter Room</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="container">
+<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="log_Out()"> Logout</button>
+	<center>
+		<h1 class="header" style="color: black;">	
+			Twitter	
+			<sup>
+				&nbsp;
+				<img id= "Twit" src="Twitter_Bird.jpg">
+			</sup>
+		</h1>
+		<h3 class="color_white"><b id="user_name" class="btn btn-info"></b></h3>
+		<div class="form-group input_div_room_page">
+			<h4><b>#Add Room</b></h4>
+			<h3><b id="Warn2" style="color: red; font-family: 'Chango', cursive;" ></b></h3>
+			<input type="text" id="room_name" class="form-control" placeholder="Room name">
+			<br>
+			<button class="btn btn-primary" onclick="addRoom()">Add Room</button>
+		</div>
+		<h3 class="color_white"><b style="color: black;">#TRENDINGROOMS</b></h3>
+
+		<div id="output">
+
+		</div>
+	</center>
+</div>
+<script src="jmain.js"></script>
+<style>
+	#user_name {
+		color: black;
+		font-weight: bolder;
+		font-size: larger;
+	}
+
+	#output{
+		background: linear-gradient(#a1c4fd 0% , #c2e9fb 100%);
+		border-radius: 10px;
+		border-top: 7px solid #AA4465;
+		padding: 10px;
+		float: none;
+		text-align: left;
+		width:80%;
+	}
+</style>
+</body>
+</html>
